@@ -5,12 +5,13 @@ const Child=({value, func})=>{
     function removeItem(e){
         //    console.log(typeof(e.target.className))
         let resultValue= value.filter((element,ind)=>{
-                  return e.target.className==ind
+                  return e.target.className!=ind
         })
+        // console.log(resultValue);
         func(resultValue)
     }
     return (
-        <div>
+        <div className="child">
             
             <h3>Child Component</h3>
             <ul>
